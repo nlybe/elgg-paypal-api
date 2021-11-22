@@ -1,0 +1,27 @@
+div.purchase_success {
+    border: 2px solid #9aba64;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 5px 0 0;
+    background-color: #f6f6f6;
+    text-align: center;
+    width: 100%;
+}
+
+.paypal_accept_terms_text {
+    display: none;
+}
+
+#paypal_btn {
+    position: relative;
+    z-index: 90;
+} 
+
+.paypal_btn_disabled {
+    opacity: 70%;
+    /* cursor: auto!important; */
+}
+
+#accept_terms_chbx {
+    margin: 0 0 10px;
+}
