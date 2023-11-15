@@ -1,7 +1,6 @@
-Elgg PayPal API Plugin
-======================
+# Elgg PayPal API Plugin
 
-![Elgg 3.3](https://img.shields.io/badge/Elgg-3.3-orange.svg?style=flat-square)
+![Elgg 4.3](https://img.shields.io/badge/Elgg-4.3-orange.svg?style=flat-square)
 
 PayPal plugin for Elgg, offering the API for accepting Payments using PayPal on social communities based on Elgg.
 

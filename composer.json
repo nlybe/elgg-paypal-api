@@ -17,11 +17,14 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
+        "php": ">=8.0",
         "composer/installers": ">=1.0.8",
         "paypal/rest-api-sdk-php": "*"
     },
     "extra": {
         "installer-name": "paypal_api"
-    } 
+    },
+	"conflict": {
+		"elgg/elgg": "<4.0"
+	}
 }

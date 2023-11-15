@@ -1,5 +1,8 @@
-Elgg PayPal API Plugin - CHANGE LOG
-===================================
+# Elgg PayPal API Plugin Change Log
+
+## 4.4 (Nov 2023)
+
+- Upgraded for Elgg 4.3.x compatibility
 
 ### 3.3 (Nov 2021)
 

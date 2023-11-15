@@ -9,19 +9,32 @@ use PaypalApi\Elgg\Bootstrap;
 require_once(dirname(__FILE__) . '/lib/hooks.php');
 
 return [
+    'plugin' => [
+        'name' => 'PayPal API',
+		'version' => '4.4',
+		'dependencies' => [],
+	],
     'bootstrap' => Bootstrap::class,
     'entities' => [
         [
             'type' => 'object',
             'subtype' => 'paypal_transaction',
             'class' => 'PaypalTransaction',
-            'searchable' => false,
+            'capabilities' => [
+				'commentable' => false,
+				'searchable' => false,
+				'likable' => false,
+			],
         ],
         [
             'type' => 'object',
             'subtype' => 'paypal_transaction_unit',
             'class' => 'PaypalTransactionUnit',
-            'searchable' => false,
+            'capabilities' => [
+				'commentable' => false,
+				'searchable' => false,
+				'likable' => false,
+			],
         ],
     ],
 	'settings' => [
