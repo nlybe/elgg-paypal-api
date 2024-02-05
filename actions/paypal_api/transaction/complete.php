@@ -38,8 +38,9 @@ if ($buyer->guid !== $user->guid) {
 // If everything is OK, log transaction
 PaypalApiOptions::paypalLogTransaction($transaction);
 
-// will be rendered client-side
-system_message(elgg_echo('paypal_api:transaction:success'));
+elgg_ok_response('', elgg_echo('paypal_api:transaction:success'), REFERRER);
+// elgg_ok_response('', elgg_echo('paypal_api:transaction:success'));
 
 echo json_encode($result);
+
 

@@ -6,12 +6,12 @@
 
 use PaypalApi\Elgg\Bootstrap;
 
-require_once(dirname(__FILE__) . '/lib/hooks.php');
+require_once(dirname(__FILE__) . '/lib/events.php');
 
 return [
     'plugin' => [
         'name' => 'PayPal API',
-		'version' => '4.4',
+		'version' => '5.5',
 		'dependencies' => [],
 	],
     'bootstrap' => Bootstrap::class,
@@ -59,9 +59,22 @@ return [
             'resource' => 'paypal_api/transaction_view',
         ],
     ],
-    'widgets' => [],
     'views' => [
         'default' => [],
     ],
-    'upgrades' => [],
+	'events' => [
+		'register' => [
+			'menu:admin_header' => [
+				'paypal_api_admin_menu' => ['priority' => 700],
+			],
+		],
+	],
+	'view_extensions' => [
+		'elgg.css' => [
+			'paypal_api/paypal_api.css' => [],
+		],
+		'css/admin' => [
+			'paypal_api/paypal_api_admin.css' => [],
+		],
+	],
 ];

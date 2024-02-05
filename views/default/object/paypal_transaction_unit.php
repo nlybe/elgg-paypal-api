@@ -32,7 +32,7 @@ foreach ($fields as $k => $v) {
     }
     
     if (!empty($entity->$k)) {
-        if ($k == 'title' && $e instanceof ElggObject) {
+        if ($k == 'title' && $e instanceof \ElggObject) {
             $value = elgg_view('output/url', [
                 'href' => $e->getURL(),
                 'text' => $e->title,

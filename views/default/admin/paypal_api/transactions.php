@@ -34,11 +34,11 @@ if (elgg_is_active_plugin('datatables_api')) {
             // datatable 
             $dt_data_tmp['guid'] = $e->getGUID();
             
-            $entity = get_entity($e->object_guid);
-            if (!$entity instanceof ElggObject) {    // backward compatibility
-                $entity = get_entity($e->item_number);
+            $entity = get_entity(intval($e->object_guid));
+            if (!$entity instanceof \ElggObject) {    // backward compatibility
+                $entity = get_entity(intval($e->item_number));
             }
-            if ($entity instanceof ElggObject) {
+            if ($entity instanceof \ElggObject) {
                 $dt_data_tmp['title'] = elgg_view('output/url', array(
                     'href' => $entity->getURL(),
                     'text' => $e->title,

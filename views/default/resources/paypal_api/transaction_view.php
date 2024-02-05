@@ -13,7 +13,7 @@ $entity = get_entity($guid);
 
 $error_msg = '';
 
-if (!$entity instanceof PaypalTransaction) {
+if (!$entity instanceof \PaypalTransaction) {
     $error_msg = elgg_echo('paypal_api:error:invalid_entity');
 }
 
